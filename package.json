@@ -1,0 +1,31 @@
+{
+  "name": "robot.ti.jsnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "DEBUG=robot.ti.jsnode* node build/index.js",
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "local": "npm run build && npm run start",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/sequelize": "^4.28.20",
+    "@types/uuid": "^9.0.8"
+  },
+  "dependencies": {
+    "@total-typescript/ts-reset": "github:total-typescript/ts-reset",
+    "dotenv": "^16.4.3",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "saas-globals": "bitbucket:igorjan94/saas-globals#2023.10.03",
+    "sequelize": "^6.37.1",
+    "typescript": "^5.3.3",
+    "uuid": "^9.0.1"
+  }
+}
