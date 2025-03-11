@@ -1,10 +1,10 @@
 {
-  "name": "robot.ti.jsnode",
+  "name": "shop-scanner",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "DEBUG=robot.ti.jsnode* node build/index.js",
+    "debug": "DEBUG=shop-skaner* node build/index.js",
     "build": "tsc -p tsconfig.json",
     "start": "node build/index.js",
     "local": "npm run build && npm run start",
@@ -20,9 +20,12 @@
   },
   "dependencies": {
     "@total-typescript/ts-reset": "github:total-typescript/ts-reset",
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
     "dotenv": "^16.4.3",
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
+    "puppeteer": "^23.7.1",
     "saas-globals": "bitbucket:igorjan94/saas-globals#2023.10.03",
     "sequelize": "^6.37.1",
     "typescript": "^5.3.3",
