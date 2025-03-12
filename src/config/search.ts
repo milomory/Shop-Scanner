@@ -3,8 +3,14 @@ export interface SearchConfig {
   minRating: number;
   minDiscount: number;
   maxResults?: number;
-  sortBy?: 'popular' | 'price' | 'rating' | 'discount';
+  sortBy?: 'price' | 'rating' | 'discount' | 'popular';
   sortOrder?: 'asc' | 'desc';
+  filters?: {
+    minPrice?: number;
+    maxPrice?: number;
+    brands?: string[];
+    inStock?: boolean;
+  };
 }
 
 export const DEFAULT_SEARCH_CONFIG: SearchConfig = {
@@ -13,7 +19,8 @@ export const DEFAULT_SEARCH_CONFIG: SearchConfig = {
   minDiscount: 50,
   maxResults: 100,
   sortBy: 'popular',
-  sortOrder: 'desc'
+  sortOrder: 'desc',
+  filters: {}
 };
 
 // Популярные категории для поиска

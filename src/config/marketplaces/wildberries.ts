@@ -1,26 +1,12 @@
 import { CategoryInfo } from '../../types/common';
 
 export const WB_CATEGORIES: Record<string, CategoryInfo> = {
-    'Одежда': { id: 306, name: 'Одежда', subject: 'fashion' },
-    'Обувь': { id: 130, name: 'Обувь', subject: 'shoes' },
-    'Детские товары': { id: 306, name: 'Детские товары', subject: 'children' },
+    'Одежда': { id: 1, name: 'Одежда', subject: 'clothes' },
+    'Обувь': { id: 2, name: 'Обувь', subject: 'shoes' },
+    'Детские товары': { id: 306, name: 'Детские товары', subject: 'children-goods' },
     'Спорт': { id: 784, name: 'Спорт', subject: 'sport' },
-    'Красота': { id: 543, name: 'Красота', subject: 'beauty' },
-    TOYS: {
-        id: '1',
-        name: 'Игрушки',
-        subject: 'toys'
-    },
-    KIDS_CLOTHES: {
-        id: '2',
-        name: 'Детская одежда',
-        subject: 'kids-clothes'
-    },
-    JEWELRY: {
-        id: '3',
-        name: 'Ювелирные изделия',
-        subject: 'jewelry'
-    }
+    'Красота': { id: 4, name: 'Красота', subject: 'beauty' },
+    'Ювелирные изделия': { id: 6, name: 'Ювелирные изделия', subject: 'jewelry' }
 };
 
 export const WB_SEARCH_QUERIES = [
@@ -38,24 +24,19 @@ export const WB_DISCOUNT_RANGES = [
 ];
 
 export const WB_API_CONFIG = {
-    baseUrl: 'https://search.wb.ru',
+    baseUrl: 'https://search.wb.ru/exactmatch/ru/common/v4/search',
+    productBaseUrl: 'https://www.wildberries.ru/catalog',
+    imageBaseUrl: 'https://images.wbstatic.net/c246x328/new',
     defaultParams: {
         appType: 1,
         curr: 'rub',
         dest: -1257786,
         sort: 'popular',
         spp: 0,
-        regions: '80,38,83,4,64,33,68,70,30,40,86,75,69,1,31,66,110,48,22,71,114'
+        resultset: 'catalog'
     },
     headers: {
-        'Accept': '*/*',
-        'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
-        'Connection': 'keep-alive',
-        'Origin': 'https://www.wildberries.ru',
-        'Referer': 'https://www.wildberries.ru/',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'same-site',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
     }
 }; 

@@ -1,10 +1,15 @@
 export interface Product {
-  name: string;
-  brand: string;
-  category: string;
-  currentPrice: number;
+  id: string;
+  title: string;
+  brand?: string;
+  category?: string;
+  price: number;
   originalPrice: number;
-  discount: number;
+  discount?: number;
+  discountPercent?: number;
   rating: number;
-  url: string;
+  imageUrl: string;
+  url?: string;
+  productUrl?: string;
+  marketplace?: string;
 } 

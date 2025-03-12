@@ -7,7 +7,9 @@ export interface CommonProduct {
     currentPrice: number;
     originalPrice: number;
     discount: number;
-    url: string;
+    rating: number;
+    imageUrl: string;
+    productUrl: string;
     query?: string;
 }
 
